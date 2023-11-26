@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="styles.css" />
+  <title>JFK</title>
+  <script>
+    const images = [
+      "./assets/toronto.jpg",
+      "./assets/russia.jpg",
+      "./assets/londres.jpg",
+    ];
+    let currentIndex = 0;
+
+    function changeImage() {
+      const banner = document.querySelector(".banner");
+      banner.src = images[currentIndex];
+      currentIndex = (currentIndex + 1) % images.length;
+    }
+
+    setInterval(changeImage, 3000);
+  </script>
+</head>
+
+<body>
+  <!-- Barra de Navegação -->
+  <nav id="nav">
+    <div>
+      <h1 class="title">JFK</h1>
+    </div>
+    <div class="links">
+      <a class="links" href="./index.html">Home</a>
+      <a class="links" href="./pacote.html">Pacotes</a>
+      <a class="links" href="">Serviços</a>
+      <a class="links" href="">Contato</a>
+      <a class="links" href="">Sobre</a>
+    </div>
+    <div id="log-container">
+      <a href="./login.html"><button class="log">Login</button></a>
+      <a href="./register.html"><button class="log">Cadastrar</button></a>
+    </div>
+  </nav>
+  <!-- Banner Carrossel -->
+  <div id="carrosel">
+    <img class="banner" src="./assets/ny.jpg" />
+  </div>
+  <!-- Planos -->
+  <section id="plans">
+    <div class="plan">
+      <div class="image-container">
+        <h3>Londres</h3>
+        <img src="./assets/londres.jpg" />
+      </div>
+      <button class="button" type="button">
+        <a href="londres_pkg.html">Detalhes</a>
+      </button>
+    </div>
+    <div class="plan">
+      <div class="image-container">
+        <h3>Nova York</h3>
+        <img src="./assets/ny.jpg" />
+      </div>
+      <button class="button" type="button">
+        <a href="ny_pkg.html">Detalhes</a>
+      </button>
+    </div>
+    <div class="plan">
+      <div class="image-container">
+        <h3>Russia</h3>
+        <img src="./assets/russia.jpg" />
+      </div>
+      <button class="button" type="button">
+        <a href="russia_pkg.html">Detalhes</a>
+      </button>
+    </div>
+    <div class="plan">
+      <div class="image-container">
+        <h3>Toronto</h3>
+        <img src="./assets/toronto.jpg" />
+      </div>
+      <button class="button" type="button">
+        <a href="toronto_pkg.html">Detalhes</a>
+      </button>
+    </div>
+  </section>
+</body>
+
+</html>
